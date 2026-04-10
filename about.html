@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///Users/jaideepsaggar/Downloads/about.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | AJ Spinning &amp; Textile Mills</title>
+    <link href="./about_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --brown-dark: #2c1a0e;
+            --brown-mid: #5c3317;
+            --cream: #f5ede0;
+            --cream-light: #fdf8f2;
+            --red-deep: #8b1a1a;
+            --gold: #c8952a;
+            --text-dark: #1e0f06;
+            --text-mid: #5c3d2e;
+            --text-light: #a07850;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--cream-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: var(--brown-dark);
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo-area { padding: 18px 0; }
+
+        .logo-area h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--cream);
+            letter-spacing: 1px;
+        }
+
+        .logo-area h1 span { color: var(--gold); }
+
+        .logo-area p {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        nav { display: flex; gap: 32px; }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        .page-hero {
+            background-color: var(--brown-dark);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .page-hero p {
+            font-size: 0.72rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .page-hero h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--cream);
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 40px;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+            display: inline-block;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--brown-dark);
+            margin-bottom: 20px;
+        }
+
+        /* STORY */
+        .story-block {
+            margin-bottom: 60px;
+        }
+
+        .story-block p {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.9;
+            font-weight: 300;
+            margin-bottom: 16px;
+            max-width: 750px;
+        }
+
+        /* VALUES */
+        .values-section {
+            background-color: var(--cream);
+            padding: 50px 40px;
+            margin-bottom: 60px;
+        }
+
+        .values-grid {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .value-card {
+            flex: 1;
+            min-width: 200px;
+            padding: 28px 24px;
+            background-color: var(--cream-light);
+            border-top: 3px solid var(--gold);
+        }
+
+        .value-card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .value-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--brown-dark);
+            margin-bottom: 8px;
+        }
+
+        .value-card p {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* LOCATION */
+        .location-block {
+            background-color: var(--brown-dark);
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .location-block h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--cream);
+            margin-bottom: 12px;
+        }
+
+        .location-block p {
+            font-size: 0.9rem;
+            color: #c8b49a;
+            line-height: 1.8;
+            font-weight: 300;
+            max-width: 500px;
+        }
+
+        .location-highlight {
+            background-color: var(--gold);
+            color: var(--brown-dark);
+            padding: 16px 28px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        footer {
+            background-color: #1a0d06;
+            color: #a07850;
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer .footer-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        footer .footer-contact {
+            font-size: 0.82rem;
+            margin-bottom: 6px;
+        }
+
+        footer .footer-contact a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(160, 120, 80, 0.2);
+            font-size: 0.75rem;
+            color: #6b4a30;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 16px 20px; gap: 12px; }
+            nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
+            .page-hero { padding: 40px 20px; }
+            .content { padding: 0 20px; margin: 40px auto; }
+            .values-section { padding: 40px 20px; }
+            .location-block { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>AJ <span>Spinning</span> &amp; Textile Mills</h1>
+            <p>Ludhiana, Punjab &nbsp;·&nbsp; Est. Manufacturer</p>
+        </div>
+        <nav>
+            <a href="file:///Users/jaideepsaggar/Downloads/index.html">Home</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/products.html">Products</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/about.html" class="active">About</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-hero">
+        <p>Our Story</p>
+        <h2>About AJ Spinning &amp; Textile Mills</h2>
+    </div>
+
+    <div class="content">
+
+        <!-- STORY -->
+        <div class="story-block">
+            <p class="section-label">Who We Are</p>
+            <h2 class="section-title">Craftsmanship Meets Commerce</h2>
+            <p>AJ Spinning &amp; Textile Mills is a Ludhiana-based B2B textile manufacturer specialising in premium quality woolen shawls and yarns. We serve retailers, wholesalers, exporters and boutiques across India with a comprehensive range of fabric blends and design finishes.</p>
+            <p>Our manufacturing expertise spans over 10 fabric varieties — from pure wool and silk wool to technical blends like wool nylon and acrowool. We understand that every business has unique requirements, which is why we offer two flexible selling formats: Made to Order and Made to Customisation.</p>
+            <p>Based in Ludhiana — Punjab's textile manufacturing hub — we have access to the finest raw materials and a skilled workforce that ensures consistent quality across every order.</p>
+        </div>
+
+        <!-- VALUES -->
+        <div class="values-section">
+            <p class="section-label">What Drives Us</p>
+            <h2 class="section-title">Our Commitments</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="icon">🧶</div>
+                    <h4>Quality First</h4>
+                    <p>Every fabric blend we manufacture goes through strict quality checks to ensure consistency and durability in every batch.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">🤝</div>
+                    <h4>Partner Focused</h4>
+                    <p>We build long-term relationships with our business partners — understanding their needs and delivering reliably every time.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">✂️</div>
+                    <h4>Full Customisation</h4>
+                    <p>From fabric composition to design finishing — we manufacture exactly to your specifications with no compromise.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">📦</div>
+                    <h4>Bulk Ready</h4>
+                    <p>Our manufacturing setup is equipped to handle large volume orders while maintaining consistent quality and timely delivery.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="location-block">
+            <div>
+                <h3>Located in the Heart of Punjab's Textile Belt</h3>
+                <p>Ludhiana is one of India's most important textile manufacturing centres, giving AJ Spinning &amp; Textile Mills strategic access to premium raw materials, skilled artisans and efficient logistics for B2B supply chains across the country.</p>
+            </div>
+            <div class="location-highlight">📍 Ludhiana, Punjab</div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p class="footer-name">AJ Spinning &amp; Textile Mills</p>
+        <p class="footer-contact">📞 <a href="tel:+918557028505">+91 85570 28505</a></p>
+        <p class="footer-contact">✉️ <a href="mailto:a.jspinningandtextile@gmail.com">a.jspinningandtextile@gmail.com</a></p>
+        <p class="footer-contact">📍 Ludhiana, Punjab, India</p>
+        <p class="footer-bottom">© 2026 AJ Spinning &amp; Textile Mills. All rights reserved. | Website built by Jaideep Saggar</p>
+    </footer>
+
+
+
+</body></html>

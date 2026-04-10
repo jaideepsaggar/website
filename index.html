@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///Users/jaideepsaggar/Downloads/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Spinning &amp; Textile Mills | Premium Woolen Textiles</title>
+    <link href="./index_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --brown-dark: #2c1a0e;
+            --brown-mid: #5c3317;
+            --brown-warm: #8b4513;
+            --cream: #f5ede0;
+            --cream-light: #fdf8f2;
+            --red-deep: #8b1a1a;
+            --gold: #c8952a;
+            --text-dark: #1e0f06;
+            --text-mid: #5c3d2e;
+            --text-light: #a07850;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--cream-light);
+            color: var(--text-dark);
+        }
+
+        /* ── HEADER ── */
+        header {
+            background-color: var(--brown-dark);
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo-area {
+            padding: 18px 0;
+        }
+
+        .logo-area h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--cream);
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .logo-area h1 span {
+            color: var(--gold);
+        }
+
+        .logo-area p {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 400;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background-color: var(--brown-dark);
+            background-image: 
+                radial-gradient(ellipse at 20% 50%, rgba(139, 69, 19, 0.3) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(200, 149, 42, 0.1) 0%, transparent 50%);
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent, var(--cream-light));
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            font-size: 0.72rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-label::before {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.2rem;
+            color: var(--cream);
+            line-height: 1.1;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h2 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #c8b49a;
+            line-height: 1.8;
+            max-width: 520px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--brown-dark);
+            padding: 14px 32px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+            border: 2px solid var(--gold);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--cream);
+            padding: 14px 32px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+            border: 2px solid rgba(245, 237, 224, 0.3);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--cream);
+        }
+
+        /* ── HIGHLIGHTS STRIP ── */
+        .highlights {
+            background-color: var(--brown-mid);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .highlight-item {
+            text-align: center;
+            color: var(--cream);
+        }
+
+        .highlight-item strong {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+        }
+
+        .highlight-item span {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c8b49a;
+        }
+
+        /* ── SECTION COMMON ── */
+        section {
+            padding: 80px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            color: var(--brown-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.8;
+            max-width: 600px;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        /* ── SELLING FORMATS ── */
+        .formats-section {
+            background-color: var(--cream);
+            padding: 80px 40px;
+        }
+
+        .formats-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .formats-grid {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .format-card {
+            flex: 1;
+            min-width: 280px;
+            background-color: var(--cream-light);
+            border: 1px solid rgba(139, 69, 19, 0.15);
+            padding: 40px 36px;
+            border-top: 4px solid var(--gold);
+        }
+
+        .format-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .format-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--brown-dark);
+            margin-bottom: 12px;
+        }
+
+        .format-card p {
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ── PRODUCTS PREVIEW ── */
+        .product-categories {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-card {
+            flex: 1;
+            min-width: 260px;
+            background-color: var(--brown-dark);
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(200, 149, 42, 0.08);
+        }
+
+        .category-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--cream);
+            margin-bottom: 16px;
+        }
+
+        .fabric-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        .fabric-list li {
+            font-size: 0.82rem;
+            color: #c8b49a;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(200, 149, 42, 0.1);
+            letter-spacing: 0.5px;
+        }
+
+        .fabric-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-card a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
+
+        /* ── WHY US ── */
+        .why-section {
+            background-color: var(--brown-dark);
+            padding: 80px 40px;
+        }
+
+        .why-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-inner .section-title {
+            color: var(--cream);
+        }
+
+        .why-inner .section-subtitle {
+            color: #c8b49a;
+        }
+
+        .why-grid {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .why-card {
+            flex: 1;
+            min-width: 200px;
+            border-left: 2px solid var(--gold);
+            padding: 20px 24px;
+        }
+
+        .why-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 0.85rem;
+            color: #c8b49a;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ── CTA ── */
+        .cta-section {
+            background-color: var(--red-deep);
+            background-image: radial-gradient(ellipse at 70% 50%, rgba(200, 149, 42, 0.15) 0%, transparent 60%);
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--cream);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: #e8c4b8;
+            font-size: 0.95rem;
+            margin-bottom: 36px;
+            font-weight: 300;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background-color: #1a0d06;
+            color: #a07850;
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer .footer-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        footer .footer-contact {
+            font-size: 0.82rem;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        footer .footer-contact a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(160, 120, 80, 0.2);
+            font-size: 0.75rem;
+            color: #6b4a30;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 16px 20px;
+                gap: 12px;
+            }
+
+            nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 60px 20px;
+                min-height: auto;
+            }
+
+            .hero h2 {
+                font-size: 2.6rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .formats-section, .why-section, .cta-section {
+                padding: 60px 20px;
+            }
+
+            .highlights {
+                gap: 30px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-area">
+            <h1>AJ <span>Spinning</span> &amp; Textile Mills</h1>
+            <p>Ludhiana, Punjab &nbsp;·&nbsp; Est. Manufacturer</p>
+        </div>
+        <nav>
+            <a href="file:///Users/jaideepsaggar/Downloads/index.html">Home</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/products.html">Products</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/about.html">About</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-content">
+            <p class="hero-label">Premium B2B Textile Manufacturer</p>
+            <h2>Crafting <span>Fine Woolen</span> Textiles Since Day One</h2>
+            <p>Supplying premium quality shawls and yarns to retailers, wholesalers and exporters across India. Made to Order &amp; Made to Customisation — your specifications, our craftsmanship.</p>
+            <div class="hero-buttons">
+                <a href="file:///Users/jaideepsaggar/Downloads/products.html" class="btn-primary">Explore Products</a>
+                <a href="file:///Users/jaideepsaggar/Downloads/contact.html" class="btn-secondary">Request a Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="highlights">
+        <div class="highlight-item">
+            <strong>10+</strong>
+            <span>Fabric Varieties</span>
+        </div>
+        <div class="highlight-item">
+            <strong>B2B</strong>
+            <span>Wholesale Supply</span>
+        </div>
+        <div class="highlight-item">
+            <strong>2</strong>
+            <span>Selling Formats</span>
+        </div>
+        <div class="highlight-item">
+            <strong>100%</strong>
+            <span>Custom Orders</span>
+        </div>
+    </div>
+
+    <!-- SELLING FORMATS -->
+    <div class="formats-section">
+        <div class="formats-inner">
+            <p class="section-label">How We Work</p>
+            <h2 class="section-title">Our Selling Formats</h2>
+            <p class="section-subtitle">We offer two flexible formats to meet the diverse needs of our business partners.</p>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <div class="format-icon">🧵</div>
+                    <h3>Made to Order</h3>
+                    <p>Place bulk orders from our existing range of shawls and yarns. Choose your fabric type, quantity and specifications — we manufacture and deliver to your requirements.</p>
+                </div>
+                <div class="format-card">
+                    <div class="format-icon">✂️</div>
+                    <h3>Made to Customisation</h3>
+                    <p>Have a specific design, blend or pattern in mind? We work closely with your team to produce fully customised textiles — from fabric composition to final finishing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCTS PREVIEW -->
+    <section>
+        <p class="section-label">Our Range</p>
+        <h2 class="section-title">Products We Manufacture</h2>
+        <p class="section-subtitle">A comprehensive range of woolen shawls and yarns across multiple fabric blends and designs.</p>
+        <div class="product-categories">
+            <div class="category-card">
+                <h3>Shawls</h3>
+                <ul class="fabric-list">
+                    <li>Pure Wool</li>
+                    <li>Poly Wool</li>
+                    <li>Silk Wool</li>
+                    <li>Wool Nylon</li>
+                    <li>Rabbit Wool</li>
+                    <li>Wool Viscose</li>
+                    <li>Wool Modal</li>
+                    <li>Acrowool</li>
+                    <li>Poly Cotton</li>
+                    <li>Wool Cotton</li>
+                </ul>
+                <a href="file:///Users/jaideepsaggar/Downloads/products.html">View All →</a>
+            </div>
+            <div class="category-card">
+                <h3>Yarns</h3>
+                <ul class="fabric-list">
+                    <li>Pure Wool Yarn</li>
+                    <li>Poly Wool Yarn</li>
+                    <li>Silk Wool Yarn</li>
+                    <li>Wool Nylon Yarn</li>
+                    <li>Rabbit Wool Yarn</li>
+                    <li>Wool Viscose Yarn</li>
+                    <li>Wool Modal Yarn</li>
+                    <li>Acrowool Yarn</li>
+                    <li>Poly Cotton Yarn</li>
+                    <li>Wool Cotton Yarn</li>
+                </ul>
+                <a href="file:///Users/jaideepsaggar/Downloads/products.html">View All →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <div class="why-section">
+        <div class="why-inner">
+            <p class="section-label" style="color: var(--gold);">Why Partner With Us</p>
+            <h2 class="section-title">Built for Business Partners</h2>
+            <p class="section-subtitle">We understand the demands of B2B textile sourcing — quality, consistency and reliability.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h4>Wide Fabric Range</h4>
+                    <p>From pure wool to technical blends — we offer over 10 fabric varieties to suit every market segment.</p>
+                </div>
+                <div class="why-card">
+                    <h4>Custom Manufacturing</h4>
+                    <p>Your design, your specs. We manufacture fully to your customisation requirements.</p>
+                </div>
+                <div class="why-card">
+                    <h4>Bulk Order Ready</h4>
+                    <p>Equipped to handle large volume orders with consistent quality and timely delivery.</p>
+                </div>
+                <div class="why-card">
+                    <h4>Ludhiana Based</h4>
+                    <p>Located in Punjab's textile hub — giving us access to the best raw materials and skilled craftspeople.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Ready to Place an Order?</h2>
+        <p>Pricing is available on enquiry. Get in touch with our team to discuss your requirements and receive a quote.</p>
+        <a href="file:///Users/jaideepsaggar/Downloads/contact.html" class="btn-primary">Get in Touch</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-name">AJ Spinning &amp; Textile Mills</p>
+        <p class="footer-contact">📞 <a href="tel:+918557028505">+91 85570 28505</a></p>
+        <p class="footer-contact">✉️ <a href="mailto:a.jspinningandtextile@gmail.com">a.jspinningandtextile@gmail.com</a></p>
+        <p class="footer-contact">📍 Ludhiana, Punjab, India</p>
+        <p class="footer-bottom">© 2026 AJ Spinning &amp; Textile Mills. All rights reserved. | Website built by Jaideep Saggar</p>
+    </footer>
+
+
+
+</body></html>

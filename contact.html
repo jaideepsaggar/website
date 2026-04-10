@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///Users/jaideepsaggar/Downloads/contact.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AJ Spinning &amp; Textile Mills</title>
+    <link href="./contact_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --brown-dark: #2c1a0e;
+            --brown-mid: #5c3317;
+            --cream: #f5ede0;
+            --cream-light: #fdf8f2;
+            --gold: #c8952a;
+            --text-dark: #1e0f06;
+            --text-mid: #5c3d2e;
+            --text-light: #a07850;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--cream-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: var(--brown-dark);
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo-area { padding: 18px 0; }
+
+        .logo-area h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--cream);
+            letter-spacing: 1px;
+        }
+
+        .logo-area h1 span { color: var(--gold); }
+
+        .logo-area p {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        nav { display: flex; gap: 32px; }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        .page-hero {
+            background-color: var(--brown-dark);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .page-hero p {
+            font-size: 0.72rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .page-hero h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--cream);
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 40px;
+        }
+
+        /* CONTACT GRID */
+        .contact-grid {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .contact-form-area {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+            display: inline-block;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--brown-dark);
+            margin-bottom: 24px;
+        }
+
+        /* CONTACT CARDS */
+        .contact-card {
+            background-color: var(--brown-dark);
+            padding: 24px 20px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-card .icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .contact-card h4 {
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+
+        .contact-card a, .contact-card p {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .contact-card a:hover {
+            color: var(--gold);
+        }
+
+        /* FORM */
+        .enquiry-form {
+            background-color: var(--cream);
+            padding: 36px;
+            border-top: 4px solid var(--gold);
+        }
+
+        .enquiry-form h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--brown-dark);
+            margin-bottom: 6px;
+        }
+
+        .enquiry-form p {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-mid);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(139, 69, 19, 0.2);
+            background-color: white;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .submit-btn {
+            background-color: var(--brown-dark);
+            color: var(--cream);
+            padding: 14px 36px;
+            border: 2px solid var(--brown-dark);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--gold);
+            border-color: var(--gold);
+            color: var(--brown-dark);
+        }
+
+        /* SUCCESS MSG */
+        .success-msg {
+            display: none;
+            background-color: #2c5c2c;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.88rem;
+        }
+
+        footer {
+            background-color: #1a0d06;
+            color: #a07850;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer .footer-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        footer .footer-contact {
+            font-size: 0.82rem;
+            margin-bottom: 6px;
+        }
+
+        footer .footer-contact a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(160, 120, 80, 0.2);
+            font-size: 0.75rem;
+            color: #6b4a30;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 16px 20px; gap: 12px; }
+            nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
+            .page-hero { padding: 40px 20px; }
+            .content { padding: 0 20px; margin: 40px auto; }
+            .form-row { flex-direction: column; gap: 0; }
+            .enquiry-form { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>AJ <span>Spinning</span> &amp; Textile Mills</h1>
+            <p>Ludhiana, Punjab &nbsp;·&nbsp; Est. Manufacturer</p>
+        </div>
+        <nav>
+            <a href="file:///Users/jaideepsaggar/Downloads/index.html">Home</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/products.html">Products</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/about.html">About</a>
+            <a href="file:///Users/jaideepsaggar/Downloads/contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-hero">
+        <p>Get in Touch</p>
+        <h2>Contact Us</h2>
+    </div>
+
+    <div class="content">
+        <div class="contact-grid">
+
+            <!-- CONTACT INFO -->
+            <div class="contact-info">
+                <p class="section-label">Reach Us</p>
+                <h2 class="section-title">Let's Discuss Your Requirements</h2>
+
+                <div class="contact-card">
+                    <div class="icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+918557028505">+91 85570 28505</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:a.jspinningandtextile@gmail.com">a.jspinningandtextile@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">💼</div>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com/" target="_blank">View LinkedIn Profile</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">📍</div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Ludhiana, Punjab, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENQUIRY FORM -->
+            <div class="contact-form-area">
+                <div class="enquiry-form">
+                    <h3>Send an Enquiry</h3>
+                    <p>Fill in your details and requirements — our team will get back to you with pricing and availability.</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" id="name" placeholder="Full name">
+                        </div>
+                        <div class="form-group">
+                            <label>Business Name</label>
+                            <input type="text" id="business" placeholder="Your company">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Product Interest</label>
+                        <select id="product">
+                            <option value="">Select a product category</option>
+                            <option>Shawls — Made to Order</option>
+                            <option>Shawls — Made to Customisation</option>
+                            <option>Yarns — Made to Order</option>
+                            <option>Yarns — Made to Customisation</option>
+                            <option>Both Shawls &amp; Yarns</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Requirements</label>
+                        <textarea id="message" placeholder="Describe your requirements — fabric type, quantity, design preferences, delivery timeline etc."></textarea>
+                    </div>
+
+                    <button class="submit-btn" onclick="handleSubmit()">Submit Enquiry</button>
+
+                    <div class="success-msg" id="successMsg">
+                        ✅ Thank you! Your enquiry has been received. We'll get back to you shortly.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-name">AJ Spinning &amp; Textile Mills</p>
+        <p class="footer-contact">📞 <a href="tel:+918557028505">+91 85570 28505</a></p>
+        <p class="footer-contact">✉️ <a href="mailto:a.jspinningandtextile@gmail.com">a.jspinningandtextile@gmail.com</a></p>
+        <p class="footer-contact">📍 Ludhiana, Punjab, India</p>
+        <p class="footer-bottom">© 2026 AJ Spinning &amp; Textile Mills. All rights reserved. | Website built by Jaideep Saggar</p>
+    </footer>
+
+    <script>
+        function handleSubmit() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all required fields before submitting.');
+                return;
+            }
+
+            document.getElementById('successMsg').style.display = 'block';
+        }
+    </script>
+
+
+
+</body></html>
